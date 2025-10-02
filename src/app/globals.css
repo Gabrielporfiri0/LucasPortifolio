@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.glitch-effect {
+  text-shadow:
+    2px 0 #00fff7,
+    -2px 0 #ff00ff,
+    0 2px #00fff7,
+    0 -2px #ff00ff;
+}
