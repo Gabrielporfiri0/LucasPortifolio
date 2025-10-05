@@ -1,19 +1,21 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[auto_1fr] items-center justify-items-center min-h-screen p-8 pb-20 gap-0 sm:p-20">
+    
+    <div className="font-sans grid grid-rows-[auto_1fr] items-center justify-items-center min-h-screen  pb-20 gap-0 ">
       <header className="w-full flex items-center justify-between px-8 py-4 bg-black">
-        <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
+        <Link href="/" className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
           LP
-        </div>
+        </Link>
         <nav className="flex gap-4">
-          <button className="px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-gray-600 transition">
+          <Link href="/compras" className="px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-gray-600 transition">
             Produtos
-          </button>
-          <button className="px-6 py-2 rounded-full bg-gray-700 text-white hover:bg-gray-600 transition">
+          </Link>
+          <Link href="/contato" className="px-6 py-2 rounded-full bg-gray-800 text-white hover:bg-gray-700 transition">
             Contato
-          </button>
+          </Link>
         </nav>
         <div className="flex gap-3">
           <button className="px-6 py-2 rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-500 hover:opacity-90 transition">
@@ -46,20 +48,23 @@ export default function Home() {
 
     <div className="grid max-w-[65%] mx-auto grid-cols-1 sm:grid-cols-2 gap-12  px-4">
       {[
-        { src: '/foto1.jpg', alt: 'Lindsay', name: 'Lindsay' },
-        { src: '/foto2.jpg', alt: 'Derek', name: 'Derek' },
-        { src: '/foto4.jpg', alt: 'John', name: 'John' },
-        { src: '/foto3.jpg', alt: 'Arny', name: 'Arny' },
-      ].map(({ src, alt, name }) => (
+        { src: '/foto1.jpg', alt: 'Lindsay', name: 'Lindsay', desc:'Desenvolvedora back-end com 6 anos de experiência na construção de APIs robustas e escaláveis utilizando Node.js e Python (Django).' },
+        { src: '/foto2.jpg', alt: 'Derek', name: 'Derek', desc: 'Especialista em criar interfaces de usuário ricas e responsivas com mais de 8 anos de experiência.' },
+        { src: '/foto4.jpg', alt: 'John', name: 'John', desc:'Programador versátil com 5 anos de experiência, atuando em todas as camadas do desenvolvimento de aplicações web.' },
+        { src: '/foto3.jpg', alt: 'Arny', name: 'Arny', desc:'Profissional com 7 anos de experiência em automação de infraestrutura e otimização de pipelines de CI/CD.' },
+      ].map(({ src, alt, name, desc }) => (
         <div
           key={name}  
-          className="max-w-md bg-gray-700 rounded-lg p-6 flex gap-6"
+          className="max-w-md bg-gray-700 rounded-lg p-6 flex m-10 gap-8 border"
         >
           <div className="relative w-32 h-32 rounded-md overflow-hidden flex-shrink-0">
             <Image src={src} alt={alt} fill className="object-cover" />
           </div>
           <div className="w-full text-center"> 
             <p className="text-white font-semibold text-lg">{name}</p>
+            <div>
+              <p className="text-base">{desc}</p>
+            </div>
           </div>
         </div>
       ))}
