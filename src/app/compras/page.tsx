@@ -1,6 +1,5 @@
 'use client';
 
-
 import { useState } from 'react';
 import SiteCard from '@/components/SiteCard';
 import Link from 'next/link';
@@ -18,21 +17,21 @@ const sitesParaVenda = [
     imagem: '/images/site-portfolio.jpg',
     titulo: 'Portfólio Profissional',
     descricao: 'Mostre seus trabalhos de forma elegante e profissional. Ideal para fotógrafos, designers e artistas.',
-    valor: 499.00,
+    valor: 1499.90,
     categoria: 'Site Pessoal',
   },
   {
     imagem: '/images/site-streaming.jpg',
     titulo: 'Plataforma de Cursos',
     descricao: 'Lance seus cursos online com área de membros, upload de vídeos e sistema de progresso para alunos.',
-    valor: 2999.00,
+    valor: 1499.90,
     categoria: 'Site de Streaming',
   },
    {
     imagem: '/images/site-blog.jpg',
     titulo: 'Blog Moderno',
     descricao: 'Crie e gerencie seu conteúdo com um blog otimizado para SEO, rápido e com design responsivo.',
-    valor: 350.00,
+    valor: 1499.90,
     categoria: 'Site de Conteúdo',
   },
 ];
